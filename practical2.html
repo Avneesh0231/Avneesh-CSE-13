@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Even Odd Checker</title>
+
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f4f4;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .box{
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 10px gray;
+        text-align:center;
+    }
+
+    h2{
+        color:blue;
+    }
+
+    input{
+        padding:8px;
+        width:200px;
+    }
+
+    button{
+        padding:8px 15px;
+        background:blue;
+        color:white;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    #result{
+        margin-top:15px;
+        font-weight:bold;
+        color:green;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Even or Odd Checker</h2>
+
+
+<input type="number" id="num" placeholder="Enter a number">
+<br><br>
+
+<button onclick="check()">Check</button>
+
+<p id="result"></p>
+
+
+</div>
+
+<script>
+function check() {
+    let n = document.getElementById("num").value;
+
+    if (n % 2 == 0)
+        document.getElementById("result").innerHTML = n + " is Even";
+    else
+        document.getElementById("result").innerHTML = n + " is Odd";
+}
+</script>
+
+</body>
+</html>
